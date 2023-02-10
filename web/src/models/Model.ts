@@ -25,7 +25,9 @@ export class Model<T extends HasId> {
         private attributes: ModelAttributes<T>,
         private events: Events,
         private sync: Sync<T>,
-    ) {}
+    ) {
+        console.log('models/Model: constructor', attributes);
+    }
 
     on = this.events.on;
     trigger = this.events.trigger;

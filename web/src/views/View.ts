@@ -4,6 +4,7 @@ export abstract class View<T extends Model<K>, K> {
     regions: { [key: string]: Element } = {};
 
     constructor(public parent: Element, public model: T) {
+        console.log('views/View: constructor');
         this.bindModel();
     }
 
